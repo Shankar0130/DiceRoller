@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f8c246">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="player 1"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/player_one"
+        android:scaleType="fitCenter"
+        android:src="@drawable/animation_list"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/player_two"
+        android:src="@drawable/dice_one_pink"
+        android:layout_marginEnd="20dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/player_one"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="player 2"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_below="@id/player_two"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        android:id="@+id/abc"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="win"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#6c7a89"
+        android:weightSum="4"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_one"
+            android:text="Player 1"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:src="@drawable/dice_test_six"
+            android:layout_weight="1"
+            android:id="@+id/img_one"
+            android:onClick="spin"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:id="@+id/text_two"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:src="@drawable/dice_test_six"
+            android:layout_weight="1"
+            android:id="@+id/img_two"
+            android:onClick="spin"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
